@@ -6,6 +6,7 @@
 #include <stack>
 #include <algorithm>
 #include <limits>
+#include <cassert>
 
 #define seq(i, n) for (int i = 0; i < (n); i++)
 #define seq2(i, f, t) for (int i = (f); i < (t); i++)
@@ -22,7 +23,11 @@ void solve() {
 }
 
 int main() {
-  solve(); 
+  #ifdef TEST
+    solve();
+  #else
+  
+  #endif
 
   return 0;
 }
