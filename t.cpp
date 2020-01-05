@@ -1,33 +1,29 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <array>
-#include <queue>
-#include <stack>
-#include <algorithm>
-#include <limits>
-#include <cassert>
+#include <bits/stdc++.h>
 
-#define seq(i, n) for (int i = 0; i < (n); i++)
-#define seq2(i, f, t) for (int i = (f); i < (t); i++)
-#define rev(i, n) for (int i = (n); i >= 0; i--)
-#define rev2(i, f, t) for (int i = (f); i >= (t); i--)
 #define all(x) (x).begin(),(x).end()
+#define init() \
+  ios::sync_with_stdio(false); \
+  cin.tie(0)
 
 using namespace std;
 
 using ll = long long;
+using ull = unsigned long long;
 
-void solve() {
+template<typename M, typename N>
+constexpr common_type_t<M, N> gcd(M a, N b) {
+  return a == 0 ? b
+    : b == 0 ? a
+    : gcd(b, a % b);
+}
 
+template <typename M, typename N>
+constexpr common_type_t<M, N> lcm(M a, N b) {
+  return a * b / gcd(a, b);
 }
 
 int main() {
-  #ifdef TEST
-    solve();
-  #else
-  
-  #endif
+  init();
 
   return 0;
 }
