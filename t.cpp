@@ -12,6 +12,19 @@ using namespace std;
 using ll = long long;
 using ull = unsigned long long;
 
+#ifdef LOCAL
+
+template<typename T>
+void show(vector<T>& v) {
+    cout << '[';
+    for (const T& e : v) {
+        cout << e << ',';
+    }
+    cout << ']' << endl;
+}
+
+#endif
+
 template<typename M, typename N>
 constexpr common_type_t<M, N> gcd(M a, N b) {
   return a == 0 ? b
@@ -76,6 +89,24 @@ T modinv(T a, T m = MOD) {
     u %= m; 
     if (u < 0) u += m;
     return u;
+}
+
+template<typename T>
+vector<T> read_n(const size_t n) {
+    T dummy;
+    vector<T> v(n);
+    for (size_t i = 0; i < n; i++) {
+        cin >> dummy;
+        v[i] = dummy;
+    }
+    return v;
+}
+
+template<typename T>
+vector<T> read_n() {
+    size_t n;
+    cin >> n;
+    return read_n<T>(n);
 }
 
 int main() {
